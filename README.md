@@ -14,6 +14,8 @@ If symbols fail, you can re-run the code and download only the list of failed sy
 
 # Example of the csv file (ALLY)
 date,1. open,2. high,3. low,4. close,5. volume
+
 2020-01-31,32.2,32.325,31.85,32.03,3968506.0
+
 2020-01-30,31.74,32.495,31.69,32.45,4338968.0
 
