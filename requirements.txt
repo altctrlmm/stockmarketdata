@@ -1,5 +1,4 @@
 datetime
-sys
 requests
 robin_stocks
 alpha_vantage
