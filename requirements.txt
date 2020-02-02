@@ -1,7 +1,7 @@
-import datetime
-import sys
-import requests
-import robin_stocks as r
-import time
-import alpha_vantage
-import preferences
+time
+datetime
+sys
+requests
+robin_stocks
+alpha_vantage
+preferences
