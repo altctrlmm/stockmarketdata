@@ -10,10 +10,10 @@ $ pip install -r requirements.txt
 
 2. Open preferences.txt
 
-3. Update: 
-A. Your free AlphaVantage API key
-B. Your Robinhood email
-C. Your Robinhood password
+3. Update:<br/>
+A. Your free AlphaVantage API key<br/>
+B. Your Robinhood email<br/>
+C. Your Robinhood password<br/>
 D. Your path to where to place the csv files.
 
 4. Rename preferences.txt to preferences.py
