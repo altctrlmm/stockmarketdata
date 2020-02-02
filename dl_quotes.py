@@ -10,26 +10,11 @@ import requests
 import robin_stocks as r
 import time
 from alpha_vantage.timeseries import TimeSeries
-
-
-# ---------------------------------------
-"""
-Update your credentials and preferences:
-"""
-ts = TimeSeries(key='YOUR_ALPHAVANTAGE_KEY', output_format='pandas', indexing_type='date')
-email = 'YOUR_EMAIL_WITH_ROBINHOOD@MAIL.COM'
-password = 'YOUR_ROBINHOOD_PASSWORD'
-filePath = "C:\\YOUR\\PATH\\" # where to place the csv files. One file for each symbol.
-# ---------------------------------------
-"""
-For use with external login file
-"""
-#import preferences                 ######
-#ts = preferences.ts                ######
-#email = preferences.email          ######
-#password = preferences.password    ######
-#filePath = preferences.filePath    ######
-# ---------------------------------------
+import preferences
+ts = preferences.ts
+email = preferences.email
+password = preferences.password
+filePath = preferences.filePath
 
 start_time = datetime.now()
 processed_count = 0
