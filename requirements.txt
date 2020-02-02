@@ -1,5 +1,5 @@
 datetime
 requests
-https://github.com/jmfernandes/robin_stocks.git
+git@github.com:jmfernandes/robin_stocks.git
 alpha_vantage
 preferences
