@@ -12,17 +12,24 @@ import time
 from alpha_vantage.timeseries import TimeSeries
 
 
-
 # ---------------------------------------
 """
 Update your credentials and preferences:
 """
-#ts = TimeSeries(key='YOUR_ALPHAVANTAGE_KEY', output_format='pandas', indexing_type='date')
-#email = 'YOUR_EMAIL_WITH_ROBINHOOD@MAIL.COM'
-#password = 'YOUR_ROBINHOOD_PASSWORD'
-#filePath = "C:\\YOUR\\PATH\\" # where to place the csv files. One file for each symbol.
+ts = TimeSeries(key='YOUR_ALPHAVANTAGE_KEY', output_format='pandas', indexing_type='date')
+email = 'YOUR_EMAIL_WITH_ROBINHOOD@MAIL.COM'
+password = 'YOUR_ROBINHOOD_PASSWORD'
+filePath = "C:\\YOUR\\PATH\\" # where to place the csv files. One file for each symbol.
 # ---------------------------------------
-
+"""
+For use with external login file
+"""
+#import preferences                 ######
+#ts = preferences.ts                ######
+#email = preferences.email          ######
+#password = preferences.password    ######
+#filePath = preferences.filePath    ######
+# ---------------------------------------
 
 start_time = datetime.now()
 processed_count = 0
@@ -83,7 +90,7 @@ for _symbol, name in watchlistDict.items():                          # E
         fh.write( data.to_csv() )  
         fh.close() 
         symbols_remaining = symbols_remaining-1
-        # Adjustments for AlphaVantage's Rate Limit, 5 symbols per minute :(
+        # Adjustments for AlphaVantage's Rate Limit, 5 symbols per minute
         if minute_passed(oldepoch)==True or processed_count==5:
             rate_limit_end_time = time.time()
             time_passed = rate_limit_end_time - rate_limit_begin_time
