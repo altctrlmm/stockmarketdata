@@ -1,5 +1,5 @@
 datetime
 requests
-robin-stocks
+robin_stocks
 alpha_vantage
 preferences
