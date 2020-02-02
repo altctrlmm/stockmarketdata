@@ -1,0 +1,6 @@
+# Update your credentials and preferences:
+TimeSeries(key='YOUR_ALPHAVANTAGE_KEY', output_format='pandas', indexing_type='date')
+email = 'YOUR_EMAIL_WITH_ROBINHOOD@MAIL.COM'
+password = 'YOUR_ROBINHOOD_PASSWORD'
+filePath = "C:\\YOUR\\PATH\\" # where to place the csv files. One file for each symbol.
+# Now rename this file to preferences.py
