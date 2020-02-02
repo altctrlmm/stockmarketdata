@@ -76,7 +76,7 @@ for _symbol, name in watchlistDict.items():                          # E
         fh.close() 
         symbols_remaining = symbols_remaining-1
         # Adjustments for AlphaVantage's Rate Limit, 5 symbols per minute
-        if minute_passed(oldepoch)==True or processed_count==5:
+        if minute_passed(oldepoch)=True or processed_count==5:
             rate_limit_end_time = time.time()
             time_passed = rate_limit_end_time - rate_limit_begin_time
             pause_time = 60 - time_passed
