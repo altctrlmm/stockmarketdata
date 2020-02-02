@@ -3,15 +3,22 @@
 # Robinhood-Watchlist-Stock-History
 Download stock quote history from AlphaVantage for all the symbols in your Robinhood Default Watchlist to csv files. There is one file per symbol.
 
-Open preferences.txt
+# How to Get Started
 
-Update: 
-1. Your free AlphaVantage API key
-2. Your Robinhood email
-3. Your Robinhood password
-4. Your path to where to place the csv files.
+1. Run:
+$ pip install -r requirements.txt
 
-Rename preferences.txt to preferences.py
+2. Open preferences.txt
+
+3. Update: 
+A. Your free AlphaVantage API key
+B. Your Robinhood email
+C. Your Robinhood password
+D. Your path to where to place the csv files.
+
+4. Rename preferences.txt to preferences.py
+
+5. Open dl_quotes.py and run it.
 
 # When symbols fail
 If symbols fail, you can re-run the code and download only the list of failed symbols. The list is provided by the code. You'll have to copy/paste the list, and comment/uncomment several lines. Detailed instructions are in the code.
