@@ -5,7 +5,7 @@ Download stock quote history from AlphaVantage for all the symbols in your Robin
 
 # How to Get Started
 
-1. Run:
+1. Run:<br/>
 $ pip install -r requirements.txt
 
 2. Open preferences.txt
