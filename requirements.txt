@@ -1,6 +1,4 @@
-$ pip freeze
 datetime
-time
 sys
 requests
 robin_stocks
