@@ -1,6 +1,14 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Feb  1 18:54:53 2020
+
+@author: micah
+"""
+
 # Update your credentials and preferences:
-ts = TimeSeries(key='YOUR_ALPHAVANTAGE_KEY', output_format='pandas', indexing_type='date')
-email = 'YOUR_EMAIL_WITH_ROBINHOOD@MAIL.COM'
-password = 'YOUR_ROBINHOOD_PASSWORD'
-filePath = "C:\\YOUR\\PATH\\" # where to place the csv files. One file for each symbol.
+av_key='YOUR_ALPHAVANTAGE_KEY'
+my_filePath = "C:\\YOUR\\PATH\\" # where to place the csv files. One file for each symbol.
+rh_email = 'YOUR_EMAIL_WITH_ROBINHOOD@MAIL.COM'
+rh_password = 'YOUR_ROBINHOOD_PASSWORD'
+
 # Now rename this file to preferences.py
