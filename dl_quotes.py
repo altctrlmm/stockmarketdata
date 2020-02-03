@@ -5,14 +5,13 @@ Created on Sat Nov 16 09:35:12 2019
 @author: micah
 """
 
-
 def minute_passed(oldepoch):
     import time
     return time.time() - oldepoch >= 60
 
 def dlquotes(my_watchlist):
     # Collect preferences and credentials
-    import preferences
+    import rhutils.preferences as preferences
     email = preferences.rh_email
     password = preferences.rh_password
     filePath = preferences.my_filePath
