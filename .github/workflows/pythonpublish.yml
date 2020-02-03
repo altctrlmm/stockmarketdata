@@ -1,5 +1,5 @@
 name: rhutils
-  release: 0.02
+  release: 0.0.2
     types: [created]
 
 on: [push]
