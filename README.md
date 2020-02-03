@@ -1,7 +1,7 @@
 ![Python package](https://github.com/altctrlmm/Robinhood-Watchlist-Stock-History/workflows/Python%20package/badge.svg)
 
-# Robinhood-Watchlist-Stock-History
-Download historical stock quotes to CSV files for the symbols in your default Robinhood watchlist.
+# rhutils
+A Robinhood Utilities package. Currently you can download historical stock quotes to CSV files for the symbols in your default Robinhood watchlist. 
 
 # Example of the CSV Files
 date,1. open,2. high,3. low,4. close,5. volume<br/>
