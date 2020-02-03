@@ -3,7 +3,7 @@
 # rhutils
 A Robinhood Utilities package. Currently it can download historical stock quotes to CSV files for the symbols in your default Robinhood watchlist. Requires a free AlphaVantage key.
 
-## Download Historial Stock Quotes
+## Download Historical Stock Quotes
 ### Example of the CSV Files
 date,1. open,2. high,3. low,4. close,5. volume<br/>
 2020-01-31,32.2,32.325,31.85,32.03,3968506.0<br/>
