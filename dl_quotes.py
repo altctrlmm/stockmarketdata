@@ -10,7 +10,13 @@ def minute_passed(oldepoch):
     import time
     return time.time() - oldepoch >= 60
 
-def dlquotes(email, password, filePath, avKey):
+def dlquotes(my_watchlist):
+    # Collect preferences and credentials
+    import preferences
+    email = preferences.rh_email
+    password = preferences.rh_password
+    filePath = preferences.my_filePath
+    avKey = preferences.av_key
     from datetime import datetime
     import sys
     import requests
@@ -24,7 +30,7 @@ def dlquotes(email, password, filePath, avKey):
     
     try:
         login = r.login(email,password)
-        watchlist = r.get_watchlist_by_name(name='Default', info=None)
+        watchlist = r.get_watchlist_by_name(name=my_watchlist, info=None)
         watchlistDict = {}
         for item in watchlist:
             url = item['instrument']

@@ -1,7 +1,7 @@
 ![Python package](https://github.com/altctrlmm/Robinhood-Watchlist-Stock-History/workflows/Python%20package/badge.svg)
 
 # rhutils
-A Robinhood Utilities package. Currently it can download historical stock quotes to CSV files for the symbols in your default Robinhood watchlist. Requires a free AlphaVantage key.
+A Robinhood Utilities package. Currently it can download historical stock quotes to CSV files for the symbols in your Robinhood watchlists. Requires a free AlphaVantage key.
 
 ## Download Historical Stock Quotes
 ### Example of the CSV Files
@@ -15,7 +15,7 @@ $ pip install rhutils
 
 2. Open preferences.txt and update:<br/>
 A. Your free AlphaVantage API key<br/>
-B. Your path for the csv files.<br/>
+B. Your path for the historical csv files.<br/>
 C. Your Robinhood email<br/>
 D. Your Robinhood password
 
