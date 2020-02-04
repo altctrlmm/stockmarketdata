@@ -13,10 +13,12 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/altctrlmm/rhutils",
     packages=setuptools.find_packages('rhutils'),
+    generator="bdist_wheel (0.29.0)",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
+    keywords: ["alphavantage", "historical quotes", "robinhood", "stocks", "finance", "options", "trading", "investing"],    
     python_requires='>=3.5',
 )
