@@ -2,4 +2,3 @@ datetime
 requests
 robin_stocks
 alpha_vantage
-preferences
