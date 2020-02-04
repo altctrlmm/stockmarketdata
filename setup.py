@@ -19,6 +19,6 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    keywords: ["alphavantage", "historical quotes", "robinhood", "stocks", "finance", "options", "trading", "investing"],    
+    keywords=["alphavantage", "historical quotes", "robinhood", "stocks", "finance", "options", "trading", "investing"],    
     python_requires='>=3.5',
 )
