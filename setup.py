@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="rhutils", 
-    version="0.0.8",
+    version="0.0.9",
     author="altctrlmm",
     author_email="micahmrocks@gmail.com",
     description="Robinhood Utilities",
@@ -18,6 +18,7 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    keywords=["alphavantage", "historical quotes", "robinhood", "stocks", "finance", "options", "trading", "investing"],    
+    keywords=["alphavantage", "historical quotes", "robinhood", "stocks", 
+              "finance", "options", "trading", "investing"],    
     python_requires='>=3.5',
 )
