@@ -3,3 +3,4 @@ requests
 robin_stocks
 alpha_vantage
 preferences
+bdist_wheel-0.29.0
