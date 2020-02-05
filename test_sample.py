@@ -1,10 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sun Feb  2 01:00:49 2020
-
-@author: micah
-"""
-
+# Note to self, learn how to setup a proper test. 
 # content of test_sample.py
 def func(x):
     return x + 1
@@ -12,4 +7,3 @@ def func(x):
 
 def test_answer():
     assert func(1) == 2
-    

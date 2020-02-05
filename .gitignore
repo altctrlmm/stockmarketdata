@@ -1,7 +1,3 @@
-# Preferences / passwords
-*preferences.py
-rhutils/preferences.py
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
