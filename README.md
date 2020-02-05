@@ -1,7 +1,5 @@
 ![Python package](https://github.com/altctrlmm/Robinhood-Watchlist-Stock-History/workflows/Python%20package/badge.svg)
 
-<h1> *** STILL TESTING, RECOMMENDED DON'T DOWNLOAD YET *** </h1>
-
 <h1>rhutils</h1>
 A Robinhood Utilities package. Currently it can download historical stock quotes to CSV files for the symbols in your Robinhood watchlists. Requires a free AlphaVantage key.
 
@@ -15,15 +13,15 @@ date,1. open,2. high,3. low,4. close,5. volume<br/>
 
 <b>2. Paste the code below into a python file. Then update it with your credentials:</b>
 
-## Download Stock Quote History for Every Symbol in a Robinhood Watchlist
+<h3>Download Stock Quote History for Every Symbol in a Robinhood Watchlist</h3>
 import rhutils.dl_quotes as dlq
 
-### Update your credentials and preferences:
+<h4>Update your credentials and preferences:</h3>
 av_key='YOUR_ALPHAVANTAGE_KEY'<br/>
-historical_filePath = "C:\\YOUR\\PATH\\" # where to place the historical csv files.<br/>
+historical_filePath = "C:\\\YOUR\\\PATH\\\"<br/>
 rh_email = 'YOUR_EMAIL_WITH_ROBINHOOD@MAIL.COM'<br/>
 rh_password = 'YOUR_ROBINHOOD_PASSWORD'<br/>
-rh_watchlist = "Default" # The Robinhood watchlist to pull symbols from.
+rh_watchlist = "Default"
 
-### Run this function
+<h4>Run this function</h3>
 dlq.dlquotes( av_key, historical_filePath, rh_email, rh_password, rh_watchlist )
