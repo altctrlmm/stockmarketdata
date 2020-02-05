@@ -18,10 +18,10 @@ import rhutils.dl_quotes as dlq
 
 <h4>Update your credentials and preferences:</h3>
 av_key='YOUR_ALPHAVANTAGE_KEY'<br/>
-historical_filePath = "C:\\\YOUR\\\PATH\\\"<br/>
+historical_filePath = "C:\\YOUR\\PATH\\"<br/>
 rh_email = 'YOUR_EMAIL_WITH_ROBINHOOD@MAIL.COM'<br/>
 rh_password = 'YOUR_ROBINHOOD_PASSWORD'<br/>
-rh_watchlist = "Default"
+rh_watchlist = 'Default'
 
 <h4>Run this function</h3>
 dlq.dlquotes( av_key, historical_filePath, rh_email, rh_password, rh_watchlist )
