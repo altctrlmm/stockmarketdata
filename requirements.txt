@@ -1,4 +1,7 @@
+alpha_vantage
 datetime
 requests
 robin-stocks
-alpha_vantage
+setuptools
+sys
+time
