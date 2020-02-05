@@ -12,3 +12,4 @@ def func(x):
 
 def test_answer():
     assert func(1) == 2
+    
