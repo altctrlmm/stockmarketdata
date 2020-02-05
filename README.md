@@ -19,10 +19,10 @@ date,1. open,2. high,3. low,4. close,5. volume<br/>
 import rhutils.dl_quotes as dlq
 
 ### Update your credentials and preferences:
-av_key='YOUR_ALPHAVANTAGE_KEY'
-historical_filePath = "C:\\YOUR\\PATH\\" # where to place the historical csv files.
-rh_email = 'YOUR_EMAIL_WITH_ROBINHOOD@MAIL.COM'
-rh_password = 'YOUR_ROBINHOOD_PASSWORD'
+av_key='YOUR_ALPHAVANTAGE_KEY'<br/>
+historical_filePath = "C:\\YOUR\\PATH\\" # where to place the historical csv files.<br/>
+rh_email = 'YOUR_EMAIL_WITH_ROBINHOOD@MAIL.COM'<br/>
+rh_password = 'YOUR_ROBINHOOD_PASSWORD'<br/>
 rh_watchlist = "Default" # The Robinhood watchlist to pull symbols from.
 
 ### Run this function
