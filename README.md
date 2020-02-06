@@ -3,9 +3,9 @@
 <h1>rhutils</h1>
 A Robinhood Utilities package. Requires a free AlphaVantage key.
 
-<h2>Functions: </h2>
+<h2>Functions:</h2>
 <b>Download historical stock quotes</b> to CSV files for the symbols in your Robinhood watchlists.
-<b>
+
 
 <h4>Example of the Historical CSV Files</h4>
 date,1. open,2. high,3. low,4. close,5. volume<br/>
