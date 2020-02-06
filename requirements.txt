@@ -1,5 +1,4 @@
 alpha_vantage
-csv
 datetime
 pandas
 requests
