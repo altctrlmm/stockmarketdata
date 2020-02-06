@@ -14,12 +14,12 @@ date,1. open,2. high,3. low,4. close,5. volume<br/>
 2020-01-30,31.74,32.495,31.69,32.45,4338968.0
 
 <h2>Install: pip install rhutils</h2>
-'''python
+```python
 import dl_quotes as dlq
 
 
 <h3>Update your credentials and preferences:</h3>
-'''python
+```python
 av_key = 'YOUR_ALPHAVANTAGE_KEY'<br/>
 historical_filePath = 'C:\\YOUR\\PATH\\'<br/>
 rh_email = 'YOUR_EMAIL_WITH_ROBINHOOD@MAIL.COM'<br/>
@@ -28,11 +28,11 @@ rh_watchlist = "Default"  # The Robinhood watchlist to pull symbols from.
 
 
 <h3>Download Stock Quote History for Every Symbol in a Robinhood Watchlist</h3>
-'''python
+```python
 dlq.dlquotes( av_key, historical_filePath, rh_email, rh_password, rh_watchlist )
 
 
 <h3>Download DOHLCV for a List of Stock Symbols</h3>
-'''python
+```python
 symbol_list = ['BA', 'ALLY', 'F', 'MU', 'SPCE', 'T', 'WMT', 'S']<br/>
 dlq.simple_quotes(av_key, historical_filePath, symbol_list)
