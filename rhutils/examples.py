@@ -1,4 +1,4 @@
-import dl_quotes as dlq
+import rhutils.dl_quotes as dlq
 
 
 # Update your credentials and preferences:

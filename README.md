@@ -18,7 +18,7 @@ date,1. open,2. high,3. low,4. close,5. volume<br/>
 
 
 <h2>Install: pip install rhutils</h2>
-import dl_quotes as dlq
+import rhutils.dl_quotes as dlq
 
 
 <h3>Update your credentials and preferences:</h3>
