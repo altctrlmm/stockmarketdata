@@ -10,6 +10,25 @@ def minute_passed(oldepoch):
     return time.time() - oldepoch >= 60
 
 
+def get_watchlist_symbols(email, password, rh_watchlist):
+    import sys
+    import requests
+    import robin_stocks as r
+    try:
+        r.login(email, password)
+        watchlist = r.get_watchlist_by_name(name=rh_watchlist, info=None)
+        watchlistsymbols = []
+        for item in watchlist:
+            url = item['instrument']
+            r = requests.get(url)
+            data_json = r.json()
+            #print(str(data_json))  # print this to see more available symbol info.
+            watchlistsymbols.append(data_json['symbol'])
+        return(watchlistsymbols)
+    except Exception as e:
+        sys.exit(e)
+
+
 def simple_quotes(av_key, filePath, symbol_list):
     import requests
     import csv

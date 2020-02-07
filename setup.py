@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="rhutils",
-    version="0.2.0",
+    version="0.2.1",
     author="altctrlmm",
     author_email="micahmrocks@gmail.com",
     description="Robinhood Utilities",

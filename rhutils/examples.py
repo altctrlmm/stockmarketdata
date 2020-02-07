@@ -12,7 +12,14 @@ rh_watchlist = "Default"  # The Robinhood watchlist to pull symbols from.
 # ------------------------------------------------------------------------
 # Download Stock Quote History for Every Symbol in a Robinhood Watchlist |
 # ------------------------------------------------------------------------
-dlq.dlquotes( av_key, historical_filePath, rh_email, rh_password, rh_watchlist )
+dlq.dlquotes(av_key, historical_filePath, rh_email, rh_password, rh_watchlist)
+
+
+# ----------------------------------------------------------
+# Download OHLCV for Every Symbol in a Robinhood Watchlist |
+# ----------------------------------------------------------
+wlsymbols = dlq.get_watchlist_symbols(rh_email, rh_password, rh_watchlist)
+dlq.simple_quotes(av_key, historical_filePath, wlsymbols)
 
 
 # ---------------------------------------------
