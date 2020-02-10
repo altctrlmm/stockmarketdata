@@ -1,6 +1,4 @@
-![Python package](https://github.com/altctrlmm/Robinhood-Watchlist-Stock-History/workflows/Python%20package/badge.svg)
-<!--  -->
-<h1>rhutils</h1>
+<h1>rh_ally_utils</h1>
 A Robinhood Utilities package that downloads stock  and account data to CSV files. Requires a free AlphaVantage key.
 
 <h2>Functions:</h2>
@@ -14,10 +12,10 @@ date,1. open,2. high,3. low,4. close,5. volume<br/>
 2020-01-30,31.74,32.495,31.69,32.45,4338968.0
 
 <h3>Install</h3>
-pip install rhutils
+pip install rh_ally_utils
 
 <h3>Import</h3>
-import rhutils.dl_quotes as dlq
+import rh_ally_utils.dl_quotes as dlq
 
 <h3>Add Your Credentials and Choices</h3>
 av_key = 'YOUR_FREE_ALPHAVANTAGE_KEY'<br/>

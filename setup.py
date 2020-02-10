@@ -4,14 +4,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="ally-rh-csv",
-    version="0.2.2",
+    name="ally_rh_csv",
+    version="0.2.3",
     author="altctrlmm",
     author_email="micahmrocks@gmail.com",
     description="Robinhood and Ally download to CSV.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/altctrlmm/ally-rh-csv",
+    url="https://github.com/altctrlmm/ally_rh_csv",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

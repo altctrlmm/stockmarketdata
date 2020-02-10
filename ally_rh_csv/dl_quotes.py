@@ -13,7 +13,7 @@ def minute_passed(oldepoch):
 def get_watchlist_symbols(email, password, rh_watchlist):
     import sys
     import requests
-    import robin_stocks as r    
+    import robin_stocks as r
     try:
         r.login(email, password)
         watchlist = r.get_watchlist_by_name(name=rh_watchlist, info=None)
