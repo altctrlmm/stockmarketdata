@@ -4,14 +4,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="rhutils",
-    version="0.2.1",
+    name="ally-rh-csv",
+    version="0.2.2",
     author="altctrlmm",
     author_email="micahmrocks@gmail.com",
-    description="Robinhood Utilities",
+    description="Robinhood and Ally download to CSV.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/altctrlmm/rhutils",
+    url="https://github.com/altctrlmm/ally-rh-csv",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
