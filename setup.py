@@ -5,10 +5,10 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="ally_rh_csv",
-    version="0.2.3",
+    version="0.0.1",
     author="altctrlmm",
     author_email="micahmrocks@gmail.com",
-    description="Robinhood and Ally download to CSV.",
+    description="Download Robinhood and Ally download to CSV.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/altctrlmm/ally_rh_csv",
@@ -18,7 +18,7 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    keywords=["alphavantage", "historical quotes", "robinhood", "stocks",
-              "finance", "options", "trading", "investing"],
+    keywords=["ally", "robinhood", "CSV", "stock quotes",
+              "finance", "stocks", "options", "trading", "investing"],
     python_requires='>=3.5',
 )

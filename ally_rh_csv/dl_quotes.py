@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Nov 16 09:35:12 2019
-@author: Micah
-"""
-
-
 def minute_passed(oldepoch):
     import time
     return time.time() - oldepoch >= 60

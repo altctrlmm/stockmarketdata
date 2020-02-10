@@ -1,7 +1,7 @@
 <h1>rh_ally_utils</h1>
-A Robinhood Utilities package that downloads stock  and account data to CSV files. Requires a free AlphaVantage key.
+Download Ally and Robinhood account and stock data to CSV files. Requires a free AlphaVantage key.
 
-<h2>Functions:</h2>
+<h2>Working Functions:</h2>
 <b>Download historical stock quotes</b> to CSV files for the symbols in your Robinhood watchlists.
 <br/><br/>
 <b>Download current stock quotes</b> to CSV files for a list of symbols you define or for the symbols in your Robinhood watchlists.
