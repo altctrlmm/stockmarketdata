@@ -1,4 +1,4 @@
-<h1>rh_ally_csv</h1>
+<h1>ally_rh_csv</h1>
 Download Ally and Robinhood account and stock data to CSV files. Requires a free AlphaVantage key.
 
 <h2>Working Functions:</h2>
