@@ -8,7 +8,7 @@ setuptools.setup(
     version="0.0.1",
     author="altctrlmm",
     author_email="micahmrocks@gmail.com",
-    description="Download Robinhood and Ally download to CSV.",
+    description="Download Ally and Robinhood download to CSV.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/altctrlmm/ally_rh_csv",
