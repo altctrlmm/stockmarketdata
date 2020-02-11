@@ -1,10 +1,10 @@
-<h1>ally_rh_csv</h1>
-Download Ally and Robinhood account and stock data to CSV files.
+<h1>stockmarketdata</h1>
+Download current and historical stock quotes while connecting to your Ally or Robinhood account.
 
 <h2>Working Functions:</h2>
-<b>Download historical stock quotes</b> to CSV files from AlphaVantage for the symbols in your Robinhood watchlists.
+<b>Download historical stock quotes</b> to CSV files from AlphaVantage (slow) OR Ally (fast!) for the symbols in your Robinhood watchlists.
 <br/><br/>
-<b>Download current stock quotes</b> to CSV files from AlphaVantage (slow) OR Ally (fast!) for a list of symbols you define or for the symbols in your Robinhood watchlists.
+<b>Download current stock quotes</b> to CSV files from AlphaVantage (slow) OR Ally (fast!) for a list of symbols you define or for the symbols in your Robinhood watchlists (Ally watchlists coming soon!).
 
 <h4>Example of the CSV Files</h4>
 date,1. open,2. high,3. low,4. close,5. volume<br/>
@@ -12,11 +12,11 @@ date,1. open,2. high,3. low,4. close,5. volume<br/>
 2020-01-30,31.74,32.495,31.69,32.45,4338968.0
 
 <h3>Install</h3>
-pip install ally_rh_csv
+pip install stockmarketdata
 
 <h3>Import</h3>
-import ally_rh_csv.dl_quotes as dlq<br/>
-import ally_rh_csv.ally as ally
+import stockmarketdata.dl_quotes as dlq<br/>
+import stockmarketdata.ally as ally
 
 <h3>Add Your Credentials and Choices</h3>
 av_key = 'YOUR_ALPHAVANTAGE_KEY'
@@ -40,7 +40,7 @@ ally.get_ohlcv_from_ally(ally_consumer_key, ally_secret, ally_oauth_token, ally_
 ally_symbols = ['WORK', 'SPCE', 'BILI']<br/>
 ally.get_ohlcv_from_ally(ally_consumer_key, ally_secret, ally_oauth_token, ally_oauth_secret, ally_symbols, filePath)
 
-<h3>Download Historical Quotes (up to 20 years) from AlphaVantage for all Symbols in a Robinhood Watchlist (Slow)</h3>
+<h3>Download Historical Quotes (up to 20 years) from AlphaVantage for all Symbols in a Robinhood Watchlist (Slow but currently don't have an alternative for historical)</h3>
 dlq.dlquotes(av_key, filePath, rh_email, rh_password, rh_watchlist)
 
 <h3>Download Current OHLCV from AlphaVantage for Every Symbol in a Robinhood Watchlist (Slow)</h3>

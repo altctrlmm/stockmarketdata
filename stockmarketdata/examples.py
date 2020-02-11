@@ -1,5 +1,5 @@
-import ally_rh_csv.dl_quotes as dlq
-import ally_rh_csv.ally as ally
+import stockmarketdata.dl_quotes as dlq
+import stockmarketdata.ally as ally
 
 
 # -----------------------------------------
