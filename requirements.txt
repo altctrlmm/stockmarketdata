@@ -2,4 +2,5 @@ alpha_vantage
 datetime
 pandas
 requests
+requests_oauthlib
 robin-stocks

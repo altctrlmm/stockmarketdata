@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="ally_rh_csv",
-    version="0.0.1",
+    version="0.0.2",
     author="altctrlmm",
     author_email="micahmrocks@gmail.com",
     description="Download Ally and Robinhood download to CSV files.",
