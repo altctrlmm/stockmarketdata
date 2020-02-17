@@ -1,3 +1,7 @@
+![Python package](https://github.com/altctrlmm/stockmarketdata/workflows/Python%20package/badge.svg)
+
+![Upload Python Package](https://github.com/altctrlmm/stockmarketdata/workflows/Upload%20Python%20Package/badge.svg)
+
 <h1>stockmarketdata</h1>
 Download current and historical stock quotes while connecting to your Ally or Robinhood account.
 
