@@ -1,0 +1,17 @@
+0.0.1: 2/11/2020 Published
+0.0.2: 2/16/2020 Updated version number to merge with pypi.org.
+0.0.3: 2/29/2020
+  - Robinhood watchlist symbols are now written to [filePath]'/Watchlist.csv'.
+  - More status updates while connected to Robinhood and AlphaVantage, including:
+      - time to login (Robinhood),
+      - time to fetch watchlist (Robinhood),
+      and time to download quotes (AlphaVantage, such as for historical quotes).
+    They are now timed as three independent processes.
+
+
+======================================
+Todo:
+- add Ally watchlists
+- add command line commands
+- refactor dl_quotes to robinhood
+- check the timing on simple_quotes

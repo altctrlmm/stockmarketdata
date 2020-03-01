@@ -5,6 +5,7 @@ def minute_passed(oldepoch):
 
 def get_watchlist_symbols(email, password, rh_watchlist):
     import sys
+    import csv
     import requests
     import robin_stocks as r
     try:
@@ -15,8 +16,9 @@ def get_watchlist_symbols(email, password, rh_watchlist):
             url = item['instrument']
             r = requests.get(url)
             data_json = r.json()
-            #print(str(data_json))  # print this to see more available symbol info.
+            # print(str(data_json))  # print this to see more symbol info.
             watchlistsymbols.append(data_json['symbol'])
+        # put watchlist into a file if
         return(watchlistsymbols)
     except Exception as e:
         sys.exit(e)
@@ -85,30 +87,56 @@ def simple_quotes(av_key, filePath, symbol_list):
 
 def dlquotes(avKey, filePath, email, password, rh_watchlist):
     from datetime import datetime
+    import os
     import sys
     import requests
     import robin_stocks as r
     import time
     from alpha_vantage.timeseries import TimeSeries
     ts = TimeSeries(key=avKey, output_format='pandas', indexing_type='date')
-    start_time = datetime.now()
     processed_count = 0
     failed_symbols = []
+    wlFile = filePath + 'Watchlist.csv'
+    if os.path.exists(wlFile):
+        os.remove(wlFile)
+    f = open(wlFile, 'a')
     try:
+        print("Logging into Robinhood to fetch watchlist symbols ... ")
+        print("")
+        rh_li_starttime = time.time()
         r.login(email, password)
+        rh_li_endtime = time.time()
+        rh_li_time = rh_li_endtime - rh_li_starttime
+        print("Logged in. Time to complete login:", rh_li_time)
+        print("")
+        print("Fetching watchlist symbols ...")
+        print("")
+        rh_wl_starttime = time.time()
         watchlist = r.get_watchlist_by_name(name=rh_watchlist, info=None)
+        rh_wl_endtime = time.time()
+        rh_wl_time = rh_wl_endtime - rh_wl_starttime
+        print("Got the watchlist. Time to complete:", rh_wl_time)
+        print("")
         watchlistDict = {}
+        print("Putting watchlist symbols into file at", filePath+'Watchlist.csv ...')
+        print("")
         for item in watchlist:
             url = item['instrument']
             r = requests.get(url)
             data_json = r.json()
-            #print(str(data_json))  # print this to see more available symbol info.
+            # print(str(data_json))  # print this to see more symbol info.
             watchlistDict[data_json['symbol']] = data_json['simple_name']
+            print("Processing", str(watchlistDict[data_json['symbol']]))
+            f.write(str(data_json['simple_name'])+",")
+        f.close()
     except Exception as e:
         sys.exit(e)
 
+    start_time = datetime.now()
     oldepoch = time.time()
-    print("Total number of symbols to update: ",len(watchlistDict))
+    print("")
+    print("Starting Quotes Download ...")
+    print("Total number of symbols to update: ", len(watchlistDict))
     print("")
     total_symbols = len(watchlistDict)
     symbols_remaining = total_symbols
@@ -134,7 +162,7 @@ def dlquotes(avKey, filePath, email, password, rh_watchlist):
                 print("*** Pausing for ",pause_time," seconds.")
                 print("*** ",symbols_remaining," symbols remain.")
                 time_passed = datetime.now() - start_time
-                print("*** This download has been running for ",time_passed)
+                print("*** Quotes Download has been running for ",time_passed)
                 download_rate = time_passed / processed_count_continuous
                 estimated_time_remaining = symbols_remaining * download_rate
                 print("*** Estimated time remaining: ",estimated_time_remaining)
@@ -144,7 +172,7 @@ def dlquotes(avKey, filePath, email, password, rh_watchlist):
                 time.sleep(pause_time)
                 oldepoch = time.time()
         except Exception as e:
-            print("Error on "+_symbol+": ",e)
+            print("Error on "+_symbol+": ", e)
             failed_symbols.append(_symbol)
 
     if len(failed_symbols) > 0:
