@@ -19,6 +19,7 @@ date,1. open,2. high,3. low,4. close,5. volume<br/>
 pip install stockmarketdata
 
 <h3>Import</h3>
+import sys
 import stockmarketdata.dl_quotes as dlq<br/>
 import stockmarketdata.ally as ally
 
@@ -36,21 +37,37 @@ ally_secret = 'YOUR_ALLY_SECRET'<br/>
 ally_oauth_token = 'YOUR_ALLY_OAUTH_TOKEN'<br/>
 ally_oauth_secret = 'YOUR_ALLY_OAUTH_SECRET'
 
-<h3>Download Current OHLCV from Ally for Every Symbol in a Robinhood Watchlist (Fast)</h3>
-rh_symbols = dlq.get_watchlist_symbols(rh_email, rh_password, rh_watchlist)<br/>
-ally.get_ohlcv_from_ally(ally_consumer_key, ally_secret, ally_oauth_token, ally_oauth_secret, rh_symbols, filePath)
+operation = sys.argv
 
-<h3>Download Current OHLCV from Ally for a List of Stock Symbols (Fast)</h3>
-ally_symbols = ['WORK', 'SPCE', 'BILI']<br/>
-ally.get_ohlcv_from_ally(ally_consumer_key, ally_secret, ally_oauth_token, ally_oauth_secret, ally_symbols, filePath)
+    #----------------------------------------------------------------------------
+    # Download Current OHLCV from Ally for Every Symbol in a Robinhood Watchlist |
+    # ----------------------------------------------------------------------------
+if operation[1] == 'fast':    
+    rh_symbols = dlq.get_watchlist_symbols(rh_email, rh_password, rh_watchlist)
+    ally.get_ohlcv_from_ally(ally_consumer_key, ally_secret, ally_oauth_token, ally_oauth_secret, rh_symbols, filePath)
 
-<h3>Download Historical Quotes (up to 20 years) from AlphaVantage for all Symbols in a Robinhood Watchlist (Slow but currently don't have an alternative for historical)</h3>
-dlq.dlquotes(av_key, filePath, rh_email, rh_password, rh_watchlist)
+    # ----------------------------------------------------------------------
+    # Download Current OHLCV from AlphaVantage for a List of Stock Symbols |
+    # ----------------------------------------------------------------------    
+elif operation[1] == 'list':
+    del operation[0:2]
+    dlq.simple_quotes(av_key, filePath, operation)   
+    
+    # ----------------------------------------------------------------------------------
+    # Download historical quotes for all symbols in a Robinhood watchlist to CSV files |
+    # ----------------------------------------------------------------------------------    
+elif operation[1] == 'full':
+    dlq.dlquotes(av_key, filePath, rh_email, rh_password, rh_watchlist)
+    
 
-<h3>Download Current OHLCV from AlphaVantage for Every Symbol in a Robinhood Watchlist (Slow)</h3>
-wlsymbols = dlq.get_watchlist_symbols(rh_email, rh_password, rh_watchlist)<br/>
-dlq.simple_quotes(av_key, filePath, wlsymbols)
+# Example Usage in Command Line: 
 
-<h3>Download Current OHLCV from AlphaVantage for One or More Stock Symbols You Define (Slow)</h3>
-symbol_list = ['BA', 'ALLY', 'F', 'MU', 'SPCE', 'T', 'WMT', 'S']<br/>
-dlq.simple_quotes(av_key, filePath, symbol_list)
+# Download Current OHLCV from Ally for Every Symbol in a Robinhood Watchlist (fast)
+# python examples.py fast
+
+# Download Current OHLCV from AlphaVantage for One Symbol OR a List of Symbols (fast)
+# python examples.py list WMT
+# python examples.py list WMT AAPL MSFT TSLA
+
+# Download historical quotes for all symbols in a Robinhood watchlist (Time consuming)
+# python examples.py full 

@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="stockmarketdata",
-    version="0.0.3",
+    version="0.0.4",
     author="altctrlmm",
     author_email="micahmrocks@gmail.com",
     description="Download current and historical stock quotes to CSV files. Built on the Ally, Robinhood, and AlphaVantage APIs and relies on their free keys.",
